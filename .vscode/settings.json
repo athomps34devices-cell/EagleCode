@@ -1,0 +1,8 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureArgs": [
+        "-DCMAKE_CXX_COMPILER=C:/Users/athom/Tools/MinGW/bin/g++.exe",
+        "-DCMAKE_RC_COMPILER=C:/Users/athom/Tools/MinGW/bin/windres.exe"
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build"
+}

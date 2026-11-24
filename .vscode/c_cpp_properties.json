@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/EagleCode/src",
+                "${workspaceFolder}/EagleCode/src/core",
+                "${workspaceFolder}/EagleCode/src/core/types",
+                "${workspaceFolder}/EagleCode/src/core/io"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\Users\\athom\\Tools\\LLVM\\bin\\clang.exe",
+            "intelliSenseMode": "windows-clang-x64",
+            "cppStandard": "c++20"
+        }
+    ],
+    "version": 4
+}
