@@ -11,8 +11,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(EagleCode
     src/main.cpp
+
     src/core/types/string.cpp
+
     src/core/io/input.cpp
     src/core/io/output.cpp
     src/core/io/platform/windows/console.cpp
+
+    src/core/window/window.cpp
+    src/core/window/platform/windows/window.cpp
 )

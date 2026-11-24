@@ -1,19 +1,36 @@
-#include "core/io/input.h"
 #include "core/io/output.h"
+#include "core/window/window.h"
 
 int main()
 {
     EagleIO::initialize();
 
-    EagleIO::println("Welcome to EagleCode!");
+    EagleIO::println("Starting EagleCode...");
 
-    EagleIO::print("What is your name? ");
+    if (!EagleWindow::initialize())
+    {
+        EagleIO::println("Failed to initialize window system.");
+        return 1;
+    }
 
-    String name = EagleIO::readLine();
+    if (!EagleWindow::create(
+        "EagleCode",
+        1280,
+        800
+    ))
+    {
+        EagleIO::println("Failed to create EagleCode window.");
 
-    EagleIO::print("Hello, ");
-    EagleIO::print(name);
-    EagleIO::println("!");
+        EagleWindow::shutdown();
 
-    return 0;
+        return 1;
+    }
+
+    EagleIO::println("EagleCode window created.");
+
+    int result = EagleWindow::run();
+
+    EagleWindow::shutdown();
+
+    return result;
 }
